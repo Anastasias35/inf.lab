@@ -30,7 +30,7 @@ public class laba1{
 				y[i][j]=Math.round(y[i][j]*100)/100.0;
 				System.out.printf(y[i][j]+ "     ");
 			 }
-            System.out.print("\n");
+                         System.out.print("\n");
 		 }
 	}
 }
