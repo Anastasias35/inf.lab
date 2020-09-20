@@ -1,0 +1,38 @@
+public class laba1{
+    public static void main (String args[]){
+	     long d[];
+		 double x[];
+		 double y[][];
+		 int a=4;
+		 y=new double[15][19];
+		 x= new double[19];
+		 d= new long[15];
+		 for (int i=0;i<15;++i){           //заполнение одномерного массива d 
+		      d[i]=a;
+			  ++a;
+		 }
+		 for (int i=0;i<19;i++ ){                          //заполнение одномерного массива x
+			 x[i]=-2.0+ (double)(Math.random()*10);
+		 }
+		 for (int i=0;i<15;i++){                                                                         // заполнение двумерного массива
+			 for (int j=0;j<19;j++){
+				 if ((d[i]==6)|(d[i]==10)|(d[i]==14)|(d[i]==15)|(d[i]==16)|(d[i]==17)|(d[i]==18)){
+					 y[i][j]=Math.cbrt(Math.tan(x[j]/(Math.cos(x[j])+0.75)));
+				 }else if (d[i]==9) {
+					 y[i][j]=Math.log(Math.pow(Math.cos(2/(Math.exp(Math.abs(x[j])))),2));	
+				 }else {
+					 y[i][j]=Math.exp(Math.atan(0.1 *Math.sin(x[j])));
+				 }
+			 }
+		 }
+		 for (int i=0;i<15;i++){                                     //вывод двумерного массива с округлением
+			 for (int j=0;j<19;j++){
+				y[i][j]=Math.round(y[i][j]*100)/100.0;
+				System.out.printf(y[i][j]+ "     ");
+			 }
+            System.out.print("\n");
+		 }
+		 
+		 
+	}
+}
