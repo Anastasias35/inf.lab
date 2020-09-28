@@ -3,19 +3,19 @@ public class laba1{
 	     long d[];
 		 double x[];
 		 double y[][];
-		 int a=4;
-		 y=new double[15][19];
-		 x= new double[19];
-		 d= new long[15];
-		 for (int i=0;i<15;++i){           
+		 int a=4,b=15,c=19;
+		 y=new double[b][c];
+		 x= new double[c];
+		 d= new long[b];
+		 for (int i=0;i<b;++i){           
 		      d[i]=a;
 			  ++a;
 		 }
-		 for (int i=0;i<19;i++ ){                          
+		 for (int i=0;i<c;i++ ){                          
 			 x[i]=-2.0+ (double)(Math.random()*10);
 		 }
-		 for (int i=0;i<15;i++){                                                                        
-			 for (int j=0;j<19;j++){
+		 for (int i=0;i<b;i++){                                                                        
+			 for (int j=0;j<c;j++){
 				 if ((d[i]==6)|(d[i]==10)|(d[i]==14)|(d[i]==15)|(d[i]==16)|(d[i]==17)|(d[i]==18)){
 					 y[i][j]=Math.cbrt(Math.tan(x[j]/(Math.cos(x[j])+0.75)));
 				 }else if (d[i]==9) {
@@ -23,12 +23,7 @@ public class laba1{
 				 }else {
 					 y[i][j]=Math.exp(Math.atan(0.1 *Math.sin(x[j])));
 				 }
-			 }
-		 }
-		 for (int i=0;i<15;i++){                                     
-			 for (int j=0;j<19;j++){
-				y[i][j]=Math.round(y[i][j]*100)/100.0;
-				System.out.printf(y[i][j]+ "     ");
+				 System.out.printf("%.2f%4d",y[i][j]);
 			 }
                          System.out.print("\n");
 		 }
