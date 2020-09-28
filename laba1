@@ -1,7 +1,7 @@
 public class laba1.java{
     public static void main (String args[]){
 
-                 public static double random( double w){
+                 public static double random-2.+8( double w){
                        double q=-2.0,g=8.0;
                        w=-q + (double)(Math.random()(g-q));
                        return w;
@@ -30,7 +30,7 @@ public class laba1.java{
 			  ++a;
 		 }
 		 for (int i=0;i<c;i++ ){                          
-			 x[i]=random(x[i]);
+			 x[i]=random-2.+8(x[i]);
 		 }
 		 for (int i=0;i<b;i++){                                                                       
 			 for (int j=0;j<c;j++){
