@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="629.0" y="44.5">Interface.Vanishing</node>
+    <node x="287.0" y="21.5">Persons.Person</node>
+    <node x="136.0" y="225.0">Place.Place</node>
+    <node x="116.0" y="507.0">Place.Grot</node>
+    <node x="991.0" y="44.5">Interface.Waiting</node>
+    <node x="754.8141025641025" y="236.0">Persons.Alien</node>
+    <node x="91.0" y="44.5">Interface.Conditionchecker</node>
+    <node x="444.0" y="0.0">Enum.Speed</node>
+    <node x="0.0" y="507.0">Place.Tunnel</node>
+    <node x="231.99999999999997" y="507.0">Place.Cave</node>
+    <node x="348.0" y="507.0">Place.SurfaceofMoon</node>
+    <node x="807.0" y="0.0">Enum.Mood</node>
+    <node x="447.28205128205127" y="258.0">Persons.Cosmonaut</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Place.Cave" target="Place.Place">
+      <point x="0.0" y="-27.0" />
+      <point x="280.0" y="482.0" />
+      <point x="243.5" y="482.0" />
+      <point x="21.5" y="116.0" />
+    </edge>
+    <edge source="Place.SurfaceofMoon" target="Place.Place">
+      <point x="0.0" y="-27.0" />
+      <point x="424.0" y="482.0" />
+      <point x="286.5" y="482.0" />
+      <point x="64.5" y="116.0" />
+    </edge>
+    <edge source="Place.Grot" target="Place.Place">
+      <point x="0.0" y="-27.0" />
+      <point x="164.0" y="482.0" />
+      <point x="200.5" y="482.0" />
+      <point x="-21.5" y="116.0" />
+    </edge>
+    <edge source="Persons.Alien" target="Interface.Vanishing">
+      <point x="-19.75" y="-105.0" />
+      <point x="814.0641025641025" y="185.0" />
+      <point x="747.5" y="185.0" />
+      <point x="39.5" y="38.0" />
+    </edge>
+    <edge source="Persons.Cosmonaut" target="Persons.Person">
+      <point x="-52.66666666666663" y="-83.0" />
+      <point x="473.61538461538464" y="205.0" />
+      <point x="355.5" y="205.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="Persons.Alien" target="Enum.Mood">
+      <point x="19.75" y="-105.0" />
+      <point x="853.5641025641025" y="195.0" />
+      <point x="889.0" y="195.0" />
+      <point x="0.0" y="82.5" />
+    </edge>
+    <edge source="Place.Place" target="Persons.Person">
+      <point x="43.0" y="-116.0" />
+      <point x="265.0" y="205.0" />
+      <point x="309.83333333333326" y="205.0" />
+      <point x="-45.666666666666686" y="61.0" />
+    </edge>
+    <edge source="Place.Place" target="Interface.Conditionchecker">
+      <point x="-43.0" y="-116.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="Persons.Cosmonaut" target="Interface.Vanishing">
+      <point x="52.66666666666663" y="-83.0" />
+      <point x="578.9487179487179" y="205.0" />
+      <point x="668.5" y="205.0" />
+      <point x="-39.5" y="38.0" />
+    </edge>
+    <edge source="Persons.Cosmonaut" target="Enum.Speed">
+      <point x="0.0" y="-83.0" />
+      <point x="0.0" y="82.5" />
+    </edge>
+    <edge source="Place.Tunnel" target="Place.Place">
+      <point x="0.0" y="-27.0" />
+      <point x="48.0" y="482.0" />
+      <point x="157.5" y="482.0" />
+      <point x="-64.5" y="116.0" />
+    </edge>
+    <edge source="Persons.Alien" target="Persons.Person">
+      <point x="-59.25" y="-105.0" />
+      <point x="774.5641025641025" y="195.0" />
+      <point x="401.16666666666663" y="195.0" />
+      <point x="45.66666666666663" y="61.0" />
+    </edge>
+    <edge source="Persons.Alien" target="Interface.Waiting">
+      <point x="59.25" y="-105.0" />
+      <point x="893.0641025641025" y="205.0" />
+      <point x="1064.0" y="205.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="666.4642857142857" y="293.3928571428572" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
