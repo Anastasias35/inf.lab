@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="485.0">Enum.Equipment</node>
+    <node x="580.4011904761904" y="215.0">Interface.Conditionchecker</node>
+    <node x="221.40119047619044" y="485.0">Enum.Speed</node>
+    <node x="347.38571428571424" y="126.0">Persons.Person</node>
+    <node x="835.1357142857142" y="841.5">Place.Tunnel</node>
+    <node x="385.9845238095238" y="841.5">Place.Grot</node>
+    <node x="39.38571428571436" y="145.99999999999997">Interface.Waiting</node>
+    <node x="539.4011904761904" y="430.0">Place.Location</node>
+    <node x="563.1357142857142" y="841.5">Place.Cave</node>
+    <node x="406.40119047619044" y="540.5">Persons.Alien</node>
+    <node x="663.1357142857142" y="841.5">Place.SurfaceofMoon</node>
+    <node x="129.5" y="785.0">Persons.Cosmonaut</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Persons.Cosmonaut" target="Enum.Speed">
+      <point x="32.39999999999998" y="-71.5" />
+      <point x="242.89999999999998" y="725.0" />
+      <point x="303.90119047619044" y="725.0" />
+      <point x="0.0" y="82.5" />
+    </edge>
+    <edge source="Persons.Cosmonaut" target="Enum.Equipment">
+      <point x="-64.80000000000001" y="-71.5" />
+      <point x="145.7" y="765.0" />
+      <point x="94.5" y="765.0" />
+      <point x="0.0" y="82.5" />
+    </edge>
+    <edge source="Place.Cave" target="Place.Location">
+      <point x="20.0" y="-15.0" />
+      <point x="623.1357142857142" y="765.0" />
+      <point x="625.4011904761904" y="765.0" />
+      <point x="0.0" y="137.5" />
+    </edge>
+    <edge source="Persons.Cosmonaut" target="Persons.Person">
+      <point x="0.0" y="-71.5" />
+      <point x="210.5" y="410.0" />
+      <point x="398.38571428571424" y="410.0" />
+      <point x="-34.0" y="127.0" />
+    </edge>
+    <edge source="Place.Location" target="Interface.Conditionchecker">
+      <point x="43.0" y="-137.5" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="Place.Grot" target="Place.Location">
+      <point x="-20.0" y="-15.0" />
+      <point x="405.9845238095238" y="745.0" />
+      <point x="568.0678571428571" y="745.0" />
+      <point x="-57.33333333333337" y="137.5" />
+    </edge>
+    <edge source="Place.SurfaceofMoon" target="Place.Location">
+      <point x="38.0" y="-15.0" />
+      <point x="777.1357142857142" y="755.0" />
+      <point x="663.6234126984127" y="755.0" />
+      <point x="38.222222222222285" y="137.5" />
+    </edge>
+    <edge source="Persons.Alien" target="Persons.Person">
+      <point x="28.25" y="-27.0" />
+      <point x="491.15119047619044" y="410.0" />
+      <point x="466.38571428571424" y="410.0" />
+      <point x="34.0" y="127.0" />
+    </edge>
+    <edge source="Place.Location" target="Persons.Person">
+      <point x="-43.0" y="-137.5" />
+      <point x="582.4011904761904" y="410.0" />
+      <point x="500.38571428571424" y="410.0" />
+      <point x="68.0" y="127.0" />
+    </edge>
+    <edge source="Persons.Person" target="Interface.Waiting">
+      <point x="0.0" y="-127.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="Persons.Cosmonaut" target="Place.Location">
+      <point x="64.80000000000001" y="-71.5" />
+      <point x="275.3" y="735.0" />
+      <point x="548.956746031746" y="735.0" />
+      <point x="-76.44444444444446" y="137.5" />
+    </edge>
+    <edge source="Place.Tunnel" target="Place.Location">
+      <point x="24.0" y="-15.0" />
+      <point x="907.1357142857142" y="735.0" />
+      <point x="701.8456349206349" y="735.0" />
+      <point x="76.44444444444446" y="137.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="528.6190476190473" y="542.9285714285711" />
+  <SelectedNodes>
+    <node>Interface.Waiting</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
