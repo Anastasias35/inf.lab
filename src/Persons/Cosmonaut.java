@@ -17,11 +17,13 @@ public class Cosmonaut extends Person {
               }
     }
     public void barrier(Location location){
-        if (location.condition()){
-            System.out.println(name +" используют " + Equipment.IcePeak.getthing() + ",чтобы пройти дальше");
-        }
-        else{
-            System.out.println(name + " беспрепятственно проходят дальше ");
+        if (location.getExit() !=true){
+            if (location.condition()){
+                System.out.println(name +" используют " + Equipment.IcePeak.getthing() + ",чтобы пройти дальше");
+            }
+            else {
+                System.out.println(name + " беспрепятственно проходят дальше ");
+            }
         }
         currentheight +=1;
     }
