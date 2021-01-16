@@ -12,35 +12,30 @@ public class Main {
         alien.Move();
         alien.presence(cosmonaut);
         alien.printwaiting();
-        int currentlocation=cosmonaut.getCurrentheigh();
-        while (currentlocation <= surfaceofMoon.getHeight()){
-            if (currentlocation == grot.getHeight()) {
+        while (cosmonaut.getCurrentheigh() <= surfaceofMoon.getHeight()){
+            if (cosmonaut.getCurrentheigh() == grot.getHeight()) {
                 grot.Sneak(cosmonaut);
                 grot.printCondition();
                 cosmonaut.barrier(grot);
                 grot.output(cosmonaut);
-                currentlocation +=1;
             }
-            else if (currentlocation == cave.getHeight()) {
+            else if (cosmonaut.getCurrentheigh() == cave.getHeight()) {
                 cave.Sneak(cosmonaut);
                 cave.printCondition();
                 cosmonaut.barrier(cave);
                 cave.output(cosmonaut);
-                currentlocation +=1;
             }
-            else if (currentlocation == tunnel.getHeight()) {
+            else if (cosmonaut.getCurrentheigh() == tunnel.getHeight()) {
                 tunnel.Sneak(cosmonaut);
                 tunnel.printCondition();
                 cosmonaut.barrier(tunnel);
                 cave.output(cosmonaut);
-                currentlocation +=1;
             }
-            else if (currentlocation == surfaceofMoon.getHeight()) {
+            else if (cosmonaut.getCurrentheigh() == surfaceofMoon.getHeight()) {
                 surfaceofMoon.Sneak(cosmonaut);
                 surfaceofMoon.printCondition();
                 cosmonaut.barrier(surfaceofMoon);
                 surfaceofMoon.output(cosmonaut);
-                currentlocation +=1;
             }
         }
     }
