@@ -26,6 +26,7 @@ public  abstract  class Location implements Conditionchecker {
         if (lowpressure){
             System.out.println("у" + person.getName() + " возникают проблемы");
         }
+        printCondition();
 
     }
     public String getName(){
