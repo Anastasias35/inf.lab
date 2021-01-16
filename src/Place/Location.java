@@ -27,6 +27,7 @@ public  abstract  class Location implements Conditionchecker {
             System.out.println("у" + person.getName() + " возникают проблемы");
         }
         printCondition();
+        output(person);
 
     }
     public String getName(){
