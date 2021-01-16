@@ -16,22 +16,18 @@ public class Main {
             if (cosmonaut.getCurrentheigh() == grot.getHeight()) {
                 grot.Sneak(cosmonaut);
                 cosmonaut.barrier(grot);
-                grot.output(cosmonaut);
             }
             else if (cosmonaut.getCurrentheigh() == cave.getHeight()) {
                 cave.Sneak(cosmonaut);
                 cosmonaut.barrier(cave);
-                cave.output(cosmonaut);
             }
             else if (cosmonaut.getCurrentheigh() == tunnel.getHeight()) {
                 tunnel.Sneak(cosmonaut);
                 cosmonaut.barrier(tunnel);
-                cave.output(cosmonaut);
             }
             else if (cosmonaut.getCurrentheigh() == surfaceofMoon.getHeight()) {
                 surfaceofMoon.Sneak(cosmonaut);
                 cosmonaut.barrier(surfaceofMoon);
-                surfaceofMoon.output(cosmonaut);
             }
         }
     }
