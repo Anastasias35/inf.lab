@@ -13,7 +13,7 @@ public abstract  class Person implements Waiting {
     public String getName(){
         return this.name;
     }
-    public int getCurrentheigh(){
+    public int getCurrentheight(){
         return this.currentheight;
     }
     public void setCurrentheight(){
@@ -21,7 +21,7 @@ public abstract  class Person implements Waiting {
     }
     public abstract void Move();
     public void presence(Person person){
-             if(person.hashCode()==currentheight){
+             if(person.getCurrentheight()==currentheight){
                  System.out.println(getName() + " находятся вместе с " + person.getName());
                  near=true;
              }
@@ -50,6 +50,6 @@ public abstract  class Person implements Waiting {
     }
     @Override
     public int hashCode(){
-        return this.currentheight;
+        return this.toString.length();
     }
 }
