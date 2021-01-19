@@ -49,18 +49,22 @@ public  abstract  class Location implements Conditionchecker {
     public void printCondition(){
         System.out.println(condition() ? "Воздух разреженный в " + getName():  "Воздух неразреженный в " + getName());}
     @Override
-    public String toString(){
-        return name;
+    public String toString() {
+        return "Location{" + "name='" + name + '\'' + ", height=" + height + ", lowpressure=" + lowpressure + ", exit=" + exit + '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Location place = (Location) o;
-        return  place.lowpressure== place.condition() ;
+        Location location = (Location) o;
+        return height == location.height &&
+                lowpressure == location.lowpressure &&
+                exit == location.exit &&
+                Objects.equals(name, location.name);
     }
     @Override
     public int hashCode() {
-        return this.toString().length();
+        return Objects.hash(name, height, lowpressure, exit);
     }
 }
