@@ -45,11 +45,22 @@ public abstract  class Person implements Waiting {
         }
     }
     @Override
-    public String toString(){
-            return name+" на высоте " +currentheight;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return currentheight == person.currentheight &&
+                near == person.near &&
+                Objects.equals(name, person.name);
     }
+
     @Override
-    public int hashCode(){
-        return this.toString.length();
+    public int hashCode() {
+        return Objects.hash(name, currentheight, near);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" + "name='" + name + '\'' + ", currentheight=" + currentheight + ", near=" + near + '}';
     }
 }
