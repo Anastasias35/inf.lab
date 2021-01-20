@@ -1,7 +1,6 @@
 package Persons;
-import Enum.Equipment;
 import Enum.Speed;
-import Place.Location;
+
 public class Cosmonaut extends Person {
     protected boolean MoveUp=true;
     public Cosmonaut(String name, int currentheight){
@@ -16,16 +15,6 @@ public class Cosmonaut extends Person {
                   System.out.println(getName() +  " стояли на месте");
               }
     }
-    public void barrier(Location location){
-        if (location.getExit() !=true){
-            if (location.condition()){
-                System.out.println(name +" используют " + Equipment.IcePeak.getthing() + ",чтобы пройти дальше");
-            }
-            else {
-                System.out.println(name + " беспрепятственно проходят дальше ");
-            }
-        }
-        currentheight +=1;
-    }
+
 
 }

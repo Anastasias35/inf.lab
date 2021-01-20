@@ -2,9 +2,11 @@ package Persons;
 
 import Interface.Waiting;
 
+import java.util.Objects;
+
 public abstract  class Person implements Waiting {
     protected final  String name;
-    protected  int currentheight;
+    public  int currentheight;
     private  boolean near;
     public Person(String name,int currentheight){
          this.name=name;
@@ -13,7 +15,7 @@ public abstract  class Person implements Waiting {
     public String getName(){
         return this.name;
     }
-    public int getCurrentheight(){
+    public int getCurrentheigh(){
         return this.currentheight;
     }
     public void setCurrentheight(){
@@ -21,7 +23,7 @@ public abstract  class Person implements Waiting {
     }
     public abstract void Move();
     public void presence(Person person){
-             if(person.getCurrentheight()==currentheight){
+             if(person.getCurrentheigh()==currentheight){
                  System.out.println(getName() + " находятся вместе с " + person.getName());
                  near=true;
              }
@@ -44,6 +46,7 @@ public abstract  class Person implements Waiting {
             System.out.println(getName() + " ждут возвращения" );
         }
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
