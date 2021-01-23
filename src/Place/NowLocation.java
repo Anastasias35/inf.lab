@@ -14,7 +14,7 @@ public class NowLocation{
                         differentplace.get(i).Sneak(person);
                         differentplace.remove(i);
                     }
-                    ;
+                   
                 }
             }
        }
