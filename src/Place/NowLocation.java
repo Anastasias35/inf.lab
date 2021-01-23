@@ -1,18 +1,27 @@
 package Place;
-
 import Persons.Person;
-import Place.Placetype;
-public class NowLocation extends Location {
-    public void setNowLocation(Person person) {
-        while (!exit) {
-            for (Placetype nowLocation : Placetype.values()) {
-                if (person.currentheight == nowLocation.getHight()) {
-                    name = nowLocation.getName();
-                    exit = nowLocation.isExit();
-                    lowpressure = nowLocation.isLowpressure();
+
+import java.util.ArrayList;
+public class NowLocation{
+      protected ArrayList<Location> differentplace=new ArrayList<>();
+      public void addDifferentplace(Location location){
+         this.differentplace.add(location);;
+      }
+     public void Detect(Person person){
+            while (differentplace.size()>0) {
+                for (int i = 0; i < differentplace.size(); i++) {
+                    if (person.currentheight == differentplace.get(i).height) {
+                        differentplace.get(i).Sneak(person);
+                        differentplace.remove(i);
+                    }
+                    ;
                 }
             }
-            Sneak(person);
-        }
+       }
+    @Override
+    public String toString() {
+        return "NowLocation{" +
+                "differentplace=" + differentplace +
+                '}';
     }
 }

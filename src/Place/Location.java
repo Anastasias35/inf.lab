@@ -9,6 +9,13 @@ public abstract class Location implements  Conditionchecker{
     protected int height ;
     protected boolean lowpressure;
     protected boolean exit;
+    public Location(String name,int height, boolean lowpressure,boolean exit){
+        this.name=name;
+        this.height=height;
+        this.lowpressure=lowpressure;
+        this.exit=exit;
+    }
+
     public void output(Person person) {
         if (exit) {
             System.out.println(person.getName() + " добрались до выхода");
