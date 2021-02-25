@@ -1,7 +1,7 @@
-package Persons;
+package persons;
 
 public class ProfessorZvezdochkin extends Person {
-    public ProfessorZvezdochkin(String name, int currentheight, int groups,int weight){
-        super(name, currentheight,groups, weight);
+    public ProfessorZvezdochkin(String name, int currentheight,int currentpositionofX, int currentpositionofY, int weight,int group){
+        super(name,currentheight,currentpositionofX,currentpositionofY,weight,group);
     }
 }

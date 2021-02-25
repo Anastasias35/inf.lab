@@ -1,59 +1,62 @@
-package Persons;
-import  Exception.MassiveException;
-import java.awt.*;
+package persons;
+import devices.RocketNIP;
+import exceptions.InvalidParameterException;
+
 import java.util.ArrayList;
 
 public class Znaika extends Person {
-    Group1 group1=new Group1();
-    Group2 group2=new Group2();
-    public Znaika(String name, int currentheight,int groups, int weight){
-        super(name, currentheight,groups, weight);
-        System.out.println("Создан персонаж " +name);
+
+    public Znaika(String name, int currentheight,int currentpositionofX, int currentpositionofY, int weight,int group){
+        super(name,currentheight,currentpositionofX,currentpositionofY,weight,group);
     }
-    public void Separate(Person person){
+    public void separate(Person person){
+       if (person==null) throw new InvalidParameterException("null передано в person");
        System.out.println(name + "определяет группу у " + person.getName());
        group1.addgroup(person);
        group2.addgroup(person);
     }
     public static class Group1 {
-        ArrayList<String> group1 = new ArrayList<>(8);
-        public int Checkcount() throws  MassiveException{
-            if (group1.size() >8 ) { throw new MassiveException(" В группе 1 персонажей больше,чем создано"); };
-            return group1.size();
-        }
-        public void addgroup(Person person)  {
-                try {
-                     Checkcount();
-                } catch (MassiveException e){
-                    System.err.println(e.getMessage()  + "на какого-то персонажа увеличили работу");
-                }finally {
-                    if (person.group != null && person.group == 1) {
-                        group1.add(person.name);
-                        System.out.println(person.getName() + " в группе 1");
-                        workgroup(person);
-                }
+        public String tittle;
 
-            }
-
-       }
-        public void workgroup(Person person) {
-            System.out.println(person.getName() + " идет проверять ракету ");
+        public Group1(String tittle) {
+            this.tittle = tittle;
         }
-    }
-    public static class Group2 {
-        ArrayList<String> group2 = new ArrayList<>(8);
+        ArrayList<String> groupofpersons1 = new ArrayList<>();
 
         public void addgroup(Person person) {
-            if (person.group != null && person.group == 1) {
-                group2.add(person.name);
+            if (person == null) throw new InvalidParameterException("null передано в person");
+            if (person.group == 1) {
+                groupofpersons1.add(person.name);
+                System.out.println(person.getName() + " в группе 1");
+                workgroup(person);
+            }
+        }
+
+        public void workgroup(Person person) {
+                System.out.println( person.getName()+ " идет на проверку");
+        }
+    }
+
+    public static class Group2 {
+        public String tittle;
+        public Group2(String tittle){
+            this.tittle=tittle;
+        }
+        ArrayList<String> groupofpersons2 = new ArrayList<>();
+        public void addgroup(Person person) {
+            if (person==null) throw new InvalidParameterException("null передано в person");
+            if (person.group == 2) {
+                groupofpersons2.add(person.name);
                 System.out.println(person.getName() + " в группе 2");
                 workgroup(person);
             }
         }
         public void workgroup(Person person) {
+            if (person==null) throw new InvalidParameterException("null передано в person");
             System.out.println(person.getName() + " идет собирать металлы ");
         }
     }
 
-
+    Group1 group1=new Group1("группа 1");
+    Group2 group2=new Group2("группа 2");
 }
