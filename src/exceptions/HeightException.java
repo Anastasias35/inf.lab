@@ -1,6 +1,6 @@
 package exceptions;
 
-public class HeightException extends Exception { // ошибка вылезет,если активация объекта null
+public class HeightException extends Exception { 
     public HeightException(String message){
         super(message);
     }
